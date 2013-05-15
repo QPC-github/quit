@@ -56,8 +56,8 @@
 #define GOLUAHEIGHT 3
 #define GOLUALENGTH 14
 #define GOLUASTR01 "___'' ||  ____"
-#define GOLUASTR02 "  |   ||     /"
-#define GOLUASTR03 "__|  / |/  /"
+#define GOLUASTR02 "  |   ||   , /"
+#define GOLUASTR03 "__|  / |/ / "
 
 #define SMOKEPTNS 3
 #define SMOKE01 "  o  O  "
