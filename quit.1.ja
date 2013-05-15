@@ -1,0 +1,25 @@
+.\"
+.\"  Copyright 1993,2013 Toyoda Masashi.
+.\"		         (mtoyoda@acm.org)
+.\"  Copyright 2013 Kentaro Fukuchi
+.\"	@(#)sl.1
+.\"
+.TH QUIT 1 "May 5, 2013"
+.SH 名称
+sl \- キータイプを矯正します。
+.SH 形式
+.B quit
+[
+.B \-l
+]
+.SH 解説
+.B quit
+は、高度に発展した、キータイプ矯正を目的とするアニメーション プログラムです。
+.PP
+次のようなオプションがあります。
+.TP
+.B \-l
+長くなります。
+.PP
+.SH 著者
+福地 健太郎
