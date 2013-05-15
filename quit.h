@@ -1,9 +1,10 @@
 /*========================================
- *    sl.h: SL version 5.0
- *	Copyright 1993,2002,2013
+ *    quit.h:
+ *	Copyright 1993,1998,2013
  *                Toyoda Masashi 
  *		  (mtoyoda@acm.org)
- *	Last Modified: 2013/ 5/ 5
+ *	Copyright 2013
+ *                Kentaro Fukuchi
  *========================================
  */
 

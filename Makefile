@@ -1,14 +1,15 @@
 #==========================================
-#    Makefile: makefile for sl 5.0
+#    Makefile: makefile for quit 1.0
 #	Copyright 1993, 1998, 2013
 #                 Toyoda Masashi 
 #		  (mtoyoda@acm.org)
-#	Last Modified: 2013/ 5/ 5
+#	Copyright 2013
+#                 Kentaro Fukuchi
 #==========================================
 
 CC=gcc
 CFLAGS=-O
 
-sl: sl.c sl.h
-	$(CC) $(CFLAGS) -o sl sl.c -lncurses
+quit: quit.c quit.h
+	$(CC) $(CFLAGS) -o quit quit.c -lncurses
 

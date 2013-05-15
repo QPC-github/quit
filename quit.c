@@ -1,12 +1,14 @@
 /*========================================
- *    sl.c: SL version 5.0
+ *    quit.c: quit version 1.0
  *	Copyright 1993,1998,2013
  *                Toyoda Masashi 
  *		  (mtoyoda@acm.org)
- *	Last Modified: 2013/ 5/ 5
+ *	Copyright 2013
+ *                Kentaro Fukuchi
  *========================================
  */
-/* sl version 5.00 : add -c option
+/* quit version 1.00 : initial release.                                      */
+/* sl version 5.00 : add -c option                                           */
 /*                                              by Toyoda Masashi 2013/ 5/ 5 */
 /* sl version 4.00 : add C51, usleep(40000)                                  */
 /*                                              by Toyoda Masashi 2002/12/31 */
@@ -35,7 +37,7 @@
 #include <curses.h>
 #include <signal.h>
 #include <unistd.h>
-#include "sl.h"
+#include "quit.h"
 
 int LONGER = 0;
 #define EXTRACARGONUM 10
@@ -81,7 +83,7 @@ int main(int argc, char *argv[])
     scrollok(stdscr, FALSE);
 
     for (x = COLS - 1; ; --x) {
-	if (add_sl(x) == ERR) break;
+	if (add_quit(x) == ERR) break;
 	phase++;
 	refresh();
 	usleep(40000);
@@ -91,9 +93,9 @@ int main(int argc, char *argv[])
 }
 
 
-int add_sl(int x)
+int add_quit(int x)
 {
-    static char *sl[QUITHEIGHT]
+    static char *quit[QUITHEIGHT]
     = {QUITSTR01, QUITSTR02, QUITSTR03, QUITSTR04, QUITSTR05, QUITSTR06,
        QUITSTR07, QUITSTR08, QUITSTR09, QUITSTR10, QUITSTR11, QUITSTR12,
        QUITSTR13, QUITSTR14, QUITSTR15, QUITSTR16, QUITSTR17};
@@ -104,7 +106,7 @@ int add_sl(int x)
     y = (LINES - QUITHEIGHT)/2;
 
     for (i = 0; i < QUITHEIGHT; ++i) {
-	    my_mvaddstr(y + i, x, sl[i]);
+	    my_mvaddstr(y + i, x, quit[i]);
     }
     add_punpun(y + 6, x);
     add_baka(y + 6, x + 38);
