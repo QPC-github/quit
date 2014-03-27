@@ -1,7 +1,7 @@
 /*========================================
  *    quit.c: quit version 1.0
  *	Copyright 1993,1998,2013
- *                Toyoda Masashi 
+ *                Toyoda Masashi
  *		  (mtoyoda@acm.org)
  *	Copyright 2013
  *                Kentaro Fukuchi
@@ -79,12 +79,15 @@ int main(int argc, char *argv[])
     initscr();
     signal(SIGINT, SIG_IGN);
     noecho();
+	curs_set(0);
+	nodelay(stdscr, TRUE);
     leaveok(stdscr, TRUE);
     scrollok(stdscr, FALSE);
 
     for (x = COLS - 1; ; --x) {
 	if (add_quit(x) == ERR) break;
 	phase++;
+	getch();
 	refresh();
 	usleep(40000);
     }
