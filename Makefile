@@ -13,3 +13,5 @@ CFLAGS=-O
 quit: quit.c quit.h
 	$(CC) $(CFLAGS) -o quit quit.c -lncurses
 
+clean:
+	rm -f quit
