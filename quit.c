@@ -47,6 +47,8 @@ static void add_punpun(int, int);
 static void add_baka(int, int);
 static void add_golua(int, int);
 static void add_cargo(int, int);
+static void add_smoke(int y, int x);
+static int add_quit(int);
 
 int my_mvaddstr(int y, int x, char *str)
 {
@@ -131,7 +133,7 @@ int add_quit(int x)
     return OK;
 }
 
-int add_smoke(int y, int x)
+void add_smoke(int y, int x)
 {
     static char *Smoke[SMOKEPTNS] = { SMOKE01, SMOKE02, SMOKE03 };
 
